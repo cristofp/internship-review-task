@@ -5,6 +5,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import pl.phronimos.internship.postPage.entity.CommentEntity;
 import pl.phronimos.internship.postPage.service.PostService;
 
 import java.util.HashMap;
@@ -31,6 +34,13 @@ public class MainViewController {
     @GetMapping(value = {"/mainView", "/"})
     public String mainView(Model model) {
         model.addAttribute("posts", postService.getAllPosts());
+        model.addAttribute("commentDto", new CommentEntity());
         return "mainView";
+    }
+
+    @PostMapping("/addComment")
+    public String registerUser(CommentEntity comment, @RequestParam Integer postId) {
+        postService.addCommentToPost(postId, comment);
+        return "redirect:/mainView?commentAdded";
     }
 }

@@ -1,6 +1,7 @@
 package pl.phronimos.internship.postPage.service;
 
 import org.springframework.stereotype.Service;
+import pl.phronimos.internship.postPage.entity.CommentEntity;
 import pl.phronimos.internship.postPage.entity.PostEntity;
 
 import java.util.ArrayList;
@@ -32,5 +33,14 @@ public class PostService {
 
     public List<PostEntity> getAllPosts(){
         return posts;
+    }
+
+    public void addCommentToPost(Integer postId, CommentEntity comment) {
+        PostEntity postToAddComment = posts.stream()
+                .filter(post -> postId.equals(post.getId()))
+                .findFirst()
+                .orElseThrow(() -> new RuntimeException("Post of id: " + postId + " not found"));
+        CommentEntity commentToAdd = commentService.createComment(comment.getText());
+        postToAddComment.addComment(commentToAdd);
     }
 }

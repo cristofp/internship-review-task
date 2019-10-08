@@ -14,36 +14,15 @@
 </head>
 
 <body class="bg-light">
-<nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Never expand</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01"
-            aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarsExample01">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/">Refresh <span class="sr-only">(current)</span></a>
-            </li>
-        </ul>
-    </div>
-</nav>
 <div class="container py-2">
     <div class="row">
         <div class="col-12">
-            <h2 class="text-primary">Posty</h2>
+            <a href="/"><h2 class="text-primary">Posts</h2></a>
             <hr>
         </div>
     </div>
     <div class="row">
         <th:block>
-            <div class="col-md-8 offset-md-2" th:if="${param.postAdded}">
-                <div class="alert alert-success alert-dismissible">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    Post został dodany
-                </div>
-            </div>
             <div class="col-md-8 offset-md-2" th:if="${param.commentAdded}">
                 <div class="alert alert-success alert-dismissible">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -75,6 +54,13 @@
                                         th:text="${comment.text}">Cras justo odio
                                     </li>
                                 </ul>
+                                <form class="mt-2" th:action="@{/addComment(postId=${post.id})}" th:object="${commentDto}" method="post">
+                                    <div class="form-group">
+                                        <textarea id="comment" class="form-control" type="text" th:field="*{text}" placeholder="Type your comment..."></textarea>
+                                        <button type="submit" class="btn btn-sm btn-primary my-2">Add comment</button>
+                                    </div>
+                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
