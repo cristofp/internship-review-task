@@ -2,9 +2,10 @@
 This repository contains partially implemented web app that intended to provide functionality of adding posts and comments to posts.
 It's written in Java 8 using Spring Boot (Spring MVC and JPA), Thymeleaf and Bootstrap 4.
 
-Below you'll find tasks to do as your internship recruitment challenge. You do not need to do them all, but do as much you can. Feel free to search the internet for help, but it will be rather good for you to start with the links provided in `Usefull links` section.
-If you complete all tasks the expected result should be following: 
-Hint: try first understand the code that is in repository. Implementation of the tasks below will be very similar to these things that are already implemented.
+Below you'll find tasks to do as your internship recruitment challenge. You do not need to do them all, but do as much you can. Feel free to search the internet for help, but it will be rather good for you to start with the links provided in `Useful links` section.
+If you complete all tasks the expected result should be following: [click here.](https://internship-post-page.herokuapp.com/) (On first opening of page, you need to wait 30 sec for app to wake up)
+
+Hint: try first understand the code that is in repository. Implementation of the tasks below will be very similar to those things that are already implemented.
 
 
 ## Local Environment setup
