@@ -35,9 +35,9 @@ public class PostService {
         return posts;
     }
 
-    public void addCommentToPost(Integer postId, CommentEntity comment) {
+    public void addCommentToPost(int postId, CommentEntity comment) {
         PostEntity postToAddComment = posts.stream()
-                .filter(post -> postId.equals(post.getId()))
+                .filter(post -> post.getId()==postId)
                 .findFirst()
                 .orElseThrow(() -> new RuntimeException("Post of id: " + postId + " not found"));
         CommentEntity commentToAdd = commentService.createComment(comment.getText());

@@ -39,7 +39,7 @@ public class MainViewController {
     }
 
     @PostMapping("/addComment")
-    public String registerUser(CommentEntity comment, @RequestParam Integer postId) {
+    public String addComment(CommentEntity comment, @RequestParam int postId) {
         postService.addCommentToPost(postId, comment);
         return "redirect:/mainView?commentAdded";
     }

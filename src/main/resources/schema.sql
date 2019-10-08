@@ -8,6 +8,5 @@ CREATE TABLE post
 CREATE TABLE comment
 (
     id      integer PRIMARY KEY,
-    text    VARCHAR      NOT NULL,
-    post_it integer NOT NULL references post(id)
+    text    VARCHAR      NOT NULL
 );
