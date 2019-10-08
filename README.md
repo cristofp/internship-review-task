@@ -2,7 +2,7 @@
 This repository contains partially implemented web app that intended to provide functionality of adding posts and comments to posts.
 It's written in Java 8 using Spring Boot (Spring MVC and JPA), Thymeleaf and Bootstrap 4.
 
-Below you'll find tasks to do as your internship recruitment challenge. You do not need to do them all, but do as much you can. Feel free to search the internet for help, but it will be rather good for you to start with the links provided.
+Below you'll find tasks to do as your internship recruitment challenge. You do not need to do them all, but do as much you can. Feel free to search the internet for help, but it will be rather good for you to start with the links provided in `Usefull links` section.
 If you complete all tasks the expected result should be following: 
 Hint: try first understand the code that is in repository. Implementation of the tasks below will be very similar to these things that are already implemented.
 
@@ -19,6 +19,12 @@ Hint: try first understand the code that is in repository. Implementation of the
 	(local [Maven installation](https://maven.apache.org/install.html) is required)
  
 
+## Useful links
+If you are new to technologies in this project, you'll find basic introduction under following links:
+ - https://spring.io/guides/gs/spring-boot/
+ - https://spring.io/guides/gs/serving-web-content/
+ - https://spring.io/guides/gs/accessing-data-jpa/
+ - https://vladmihalcea.com/the-best-way-to-map-a-onetomany-association-with-jpa-and-hibernate/
 
 ## Tasks
 
