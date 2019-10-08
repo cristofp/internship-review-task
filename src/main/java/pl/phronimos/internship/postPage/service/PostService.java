@@ -19,12 +19,12 @@ public class PostService {
         this.commentService = commentService;
         posts.add(createPost("Java Coder","Hey, do you know if this service the one from internship task?"));
         posts.get(0)
-                .addComment(commentService.createComment("Yes, that's it"))
-                .addComment(commentService.createComment("Confirmed info"));
+                .addComment(commentService.getComment(1).get())
+                .addComment(commentService.getComment(2).get());
 
         posts.add(createPost("Spring Master Wannabe", "Oh, man it's quite difficult"));
         posts.get(1)
-                .addComment(commentService.createComment("Indeed.... Good luck!"));
+                .addComment(commentService.getComment(3).get());
     }
 
     public PostEntity createPost(String author, String text){

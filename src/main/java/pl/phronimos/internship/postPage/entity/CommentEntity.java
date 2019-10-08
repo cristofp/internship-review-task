@@ -1,6 +1,11 @@
 package pl.phronimos.internship.postPage.entity;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "comment")
 public class CommentEntity {
+    @Id
     private int id;
     private String text;
 
